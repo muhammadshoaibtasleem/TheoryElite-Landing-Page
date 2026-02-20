@@ -604,6 +604,14 @@ export default function BlogPost() {
                   ["Feedback", "Weeks later (exam results)", "Instant (after each question)"],
                   ["Social element", "None", "1v1 battles, leaderboards"],
                   ["Consistency", "Cramming before exams", "Daily habit via streaks"],
+                  ["Study format", "Passive (reading, highlighting)", "Active (quizzes, battles, flashcards)"],
+                  ["Time required", "Hours of reading per session", "5 min daily challenges"],
+                  ["Progress tracking", "No visibility until exam day", "XP, levels, stats dashboard"],
+                  ["Personalization", "One-size-fits-all textbook", "Choose subject, mode, and difficulty"],
+                  ["Accessibility", "Desk + textbook required", "Mobile — study anywhere, anytime"],
+                  ["Enjoyment", "Tedious, easy to procrastinate", "Fun — feels like a game"],
+                  ["Peer learning", "Limited to study groups", "Battle anyone globally, compare ranks"],
+                  ["Content quality", "Generic textbook questions", "Expert-curated, exam-focused questions"],
                   ["Cost", "$50-200+ textbooks", "Free to download"],
                 ].map(([factor, trad, te], i) => (
                   <div key={i} className="contents">
