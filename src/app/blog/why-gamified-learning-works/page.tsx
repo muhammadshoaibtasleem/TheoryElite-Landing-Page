@@ -411,34 +411,32 @@ export default function BlogPost() {
               </p>
 
               {/* Comparison table */}
-              <div className="bg-bg-card border border-white/5 rounded-xl overflow-hidden mb-4">
-                <div className="grid grid-cols-2">
-                  <div className="p-4 border-b border-r border-white/5">
-                    <p className="text-red-error text-xs font-semibold uppercase tracking-wider mb-1">
-                      Passive (Doesn&apos;t work)
-                    </p>
-                  </div>
-                  <div className="p-4 border-b border-white/5">
-                    <p className="text-green-success text-xs font-semibold uppercase tracking-wider mb-1">
-                      Active Recall (Works)
-                    </p>
-                  </div>
-                  {[
-                    ["Re-reading textbook chapters", "Answering quiz questions from memory"],
-                    ["Highlighting key terms", "Flashcard: see term, recall definition"],
-                    ["Watching lecture recordings", "Battling a friend on the same topic"],
-                    ["Copying notes into a notebook", "Daily challenge: 5 questions, no notes"],
-                  ].map(([passive, active], i) => (
-                    <div key={i} className="contents">
-                      <div className="p-3 border-b border-r border-white/5 text-text-tertiary text-sm">
-                        {passive}
-                      </div>
-                      <div className="p-3 border-b border-white/5 text-text-secondary text-sm">
-                        {active}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <div className="overflow-x-auto mb-4 -mx-4 px-4">
+                <table className="w-full border-collapse bg-bg-card rounded-xl overflow-hidden text-sm">
+                  <thead>
+                    <tr className="border-b border-white/5">
+                      <th className="text-left p-4 text-red-error text-xs font-semibold uppercase tracking-wider w-1/2">
+                        Passive (Doesn&apos;t work)
+                      </th>
+                      <th className="text-left p-4 text-green-success text-xs font-semibold uppercase tracking-wider w-1/2 border-l border-white/5">
+                        Active Recall (Works)
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Re-reading textbook chapters", "Answering quiz questions from memory"],
+                      ["Highlighting key terms", "Flashcard: see term, recall definition"],
+                      ["Watching lecture recordings", "Battling a friend on the same topic"],
+                      ["Copying notes into a notebook", "Daily challenge: 5 questions, no notes"],
+                    ].map(([passive, active], i) => (
+                      <tr key={i} className="border-b border-white/5 last:border-b-0">
+                        <td className="p-3 text-text-tertiary">{passive}</td>
+                        <td className="p-3 text-text-secondary border-l border-white/5">{active}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
 
               <p className="text-text-secondary leading-relaxed">
@@ -585,47 +583,47 @@ export default function BlogPost() {
                 How does a gamified quiz app like Theory Elite compare to
                 traditional study methods? Here&apos;s a side-by-side:
               </p>
-              <div className="bg-bg-card border border-white/5 rounded-xl overflow-hidden mb-4">
-                <div className="grid grid-cols-3 text-xs font-semibold uppercase tracking-wider">
-                  <div className="p-3 border-b border-r border-white/5 text-text-tertiary">
-                    Factor
-                  </div>
-                  <div className="p-3 border-b border-r border-white/5 text-text-tertiary">
-                    Traditional
-                  </div>
-                  <div className="p-3 border-b border-white/5 text-purple-light">
-                    Theory Elite
-                  </div>
-                </div>
-                {[
-                  ["Retention", "20-30% after 1 week", "Up to 90% with active recall"],
-                  ["Engagement", "Drops after 20 mins", "150% higher with gamification"],
-                  ["Motivation", "External (exam fear)", "Internal (streaks, ranks, XP)"],
-                  ["Feedback", "Weeks later (exam results)", "Instant (after each question)"],
-                  ["Social element", "None", "1v1 battles, leaderboards"],
-                  ["Consistency", "Cramming before exams", "Daily habit via streaks"],
-                  ["Study format", "Passive (reading, highlighting)", "Active (quizzes, battles, flashcards)"],
-                  ["Time required", "Hours of reading per session", "5 min daily challenges"],
-                  ["Progress tracking", "No visibility until exam day", "XP, levels, stats dashboard"],
-                  ["Personalization", "One-size-fits-all textbook", "Choose subject, mode, and difficulty"],
-                  ["Accessibility", "Desk + textbook required", "Mobile — study anywhere, anytime"],
-                  ["Enjoyment", "Tedious, easy to procrastinate", "Fun — feels like a game"],
-                  ["Peer learning", "Limited to study groups", "Battle anyone globally, compare ranks"],
-                  ["Content quality", "Generic textbook questions", "Expert-curated, exam-focused questions"],
-                  ["Cost", "$50-200+ textbooks", "Free to download"],
-                ].map(([factor, trad, te], i) => (
-                  <div key={i} className="contents">
-                    <div className="p-3 border-b border-r border-white/5 text-white text-sm font-medium">
-                      {factor}
-                    </div>
-                    <div className="p-3 border-b border-r border-white/5 text-text-tertiary text-sm">
-                      {trad}
-                    </div>
-                    <div className="p-3 border-b border-white/5 text-text-secondary text-sm">
-                      {te}
-                    </div>
-                  </div>
-                ))}
+              <div className="overflow-x-auto mb-4 -mx-4 px-4">
+                <table className="w-full border-collapse bg-bg-card rounded-xl overflow-hidden text-sm min-w-[600px]">
+                  <thead>
+                    <tr className="border-b border-white/5">
+                      <th className="text-left p-3 text-text-tertiary text-xs font-semibold uppercase tracking-wider w-[25%]">
+                        Factor
+                      </th>
+                      <th className="text-left p-3 text-text-tertiary text-xs font-semibold uppercase tracking-wider w-[37.5%] border-l border-white/5">
+                        Traditional
+                      </th>
+                      <th className="text-left p-3 text-purple-light text-xs font-semibold uppercase tracking-wider w-[37.5%] border-l border-white/5">
+                        Theory Elite
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Retention", "20-30% after 1 week", "Up to 90% with active recall"],
+                      ["Engagement", "Drops after 20 mins", "150% higher with gamification"],
+                      ["Motivation", "External (exam fear)", "Internal (streaks, ranks, XP)"],
+                      ["Feedback", "Weeks later (exam results)", "Instant (after each question)"],
+                      ["Social element", "None", "1v1 battles, leaderboards"],
+                      ["Consistency", "Cramming before exams", "Daily habit via streaks"],
+                      ["Study format", "Passive (reading, highlighting)", "Active (quizzes, battles, flashcards)"],
+                      ["Time required", "Hours of reading per session", "5 min daily challenges"],
+                      ["Progress tracking", "No visibility until exam day", "XP, levels, stats dashboard"],
+                      ["Personalization", "One-size-fits-all textbook", "Choose subject, mode, and difficulty"],
+                      ["Accessibility", "Desk + textbook required", "Mobile — study anywhere, anytime"],
+                      ["Enjoyment", "Tedious, easy to procrastinate", "Fun — feels like a game"],
+                      ["Peer learning", "Limited to study groups", "Battle anyone globally, compare ranks"],
+                      ["Content quality", "Generic textbook questions", "Expert-curated, exam-focused questions"],
+                      ["Cost", "$50-200+ textbooks", "Free to download"],
+                    ].map(([factor, trad, te], i) => (
+                      <tr key={i} className="border-b border-white/5 last:border-b-0">
+                        <td className="p-3 text-white font-medium">{factor}</td>
+                        <td className="p-3 text-text-tertiary border-l border-white/5">{trad}</td>
+                        <td className="p-3 text-text-secondary border-l border-white/5">{te}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </section>
 
