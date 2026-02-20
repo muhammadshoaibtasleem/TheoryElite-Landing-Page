@@ -119,10 +119,17 @@ export default function Blog() {
 
         {/* Posts Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post) => (
-            <article
+          {posts.map((post) => {
+            const isLive = post.slug === "why-gamified-learning-works";
+            const Wrapper = isLive ? "a" : "div";
+            const wrapperProps = isLive
+              ? { href: `/blog/${post.slug}` }
+              : {};
+            return (
+            <Wrapper
+              {...wrapperProps}
               key={post.slug}
-              className={`group bg-gradient-to-br ${post.color} rounded-2xl border ${post.border} p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300`}
+              className={`group bg-gradient-to-br ${post.color} rounded-2xl border ${post.border} p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ${isLive ? "cursor-pointer" : ""}`}
             >
               {/* Category + Date */}
               <div className="flex items-center justify-between mb-4">
@@ -148,11 +155,12 @@ export default function Blog() {
               <div className="flex items-center justify-between pt-3 border-t border-white/5">
                 <span className="text-text-tertiary text-xs">{post.date}</span>
                 <span className="text-purple-light text-xs font-medium group-hover:translate-x-1 transition-transform">
-                  Coming soon &rarr;
+                  {isLive ? "Read article \u2192" : "Coming soon \u2192"}
                 </span>
               </div>
-            </article>
-          ))}
+            </Wrapper>
+            );
+          })}
         </div>
 
         {/* Bottom CTA */}
