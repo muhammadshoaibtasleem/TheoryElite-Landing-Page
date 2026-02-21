@@ -56,7 +56,7 @@ export default function FinalCTA({
           className="flex flex-wrap justify-center items-center gap-4 mb-6"
         >
           <a
-            href="https://apps.apple.com"
+            href="https://apps.apple.com/au/app/theory-elite-mba-business/id6759365393"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-black rounded-xl font-semibold text-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-200"

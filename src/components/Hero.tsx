@@ -84,7 +84,7 @@ export default function Hero({
               className="flex flex-wrap items-center gap-3"
             >
               <a
-                href="https://apps.apple.com"
+                href="https://apps.apple.com/au/app/theory-elite-mba-business/id6759365393"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-5 py-3 bg-white text-black rounded-xl font-semibold text-sm hover:scale-[1.02] hover:shadow-xl hover:shadow-white/10 transition-all duration-200"

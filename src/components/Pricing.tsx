@@ -145,7 +145,7 @@ export default function Pricing() {
               </ul>
 
               <a
-                href="https://apps.apple.com"
+                href="https://apps.apple.com/au/app/theory-elite-mba-business/id6759365393"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full text-center py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02] ${plan.style.button}`}
