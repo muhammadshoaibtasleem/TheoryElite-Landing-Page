@@ -27,14 +27,6 @@ export const metadata: Metadata = {
       "Multiple subjects. Real-time 1v1 battles. Daily challenges. The gamified quiz app that makes studying business addictive.",
     url: "https://theoryelite.com",
     siteName: "Theory Elite",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Theory Elite — Master Business Theory Through Quiz Battles",
-      },
-    ],
     type: "website",
   },
   twitter: {
@@ -42,7 +34,6 @@ export const metadata: Metadata = {
     title: "Theory Elite — Master Business Theory Through Quiz Battles",
     description:
       "Multiple subjects. Real-time 1v1 battles. Daily challenges. The gamified quiz app that makes studying business addictive.",
-    images: ["/og-image.png"],
   },
   icons: {
     icon: [
